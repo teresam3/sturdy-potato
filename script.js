@@ -11,8 +11,8 @@ var names = []
 
     for (var i=0; i < data.elections.length; i++) {
         names.push(data.elections[i].name)
-        // console.log(data.elections[i].name)
-        // $('.lead').append(data.elections[i].name)
+        console.log(data.elections[i].name)
+        $('.lead').append(data.elections[i].name)
     } 
     console.log(names)
 })
