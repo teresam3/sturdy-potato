@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+<!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<!--css-->
+    <link rel='stylesheet' href='./rep.css'>
+<!---jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!---voting api script-->
+    <script type="text/javascript" src="https://tool.votinginfoproject.org/app.js"></script>
+    <title>Resources here!</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../reps/rep.html">Find Your Rep</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./vote.html">Vote</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+    </nav>
+<!---jumbotron-->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Fluid jumbotron</h1>
+          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+<!----input box-->
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter your address here" aria-label="Recipient's address" aria-describedby="button-addon2">
+        <div class="input-group-append">
+<!----submit hutton-->
+          <button class="btn btn-outline-secondary rep-btn" type="button" id="button-addon2">Submit</button>
+        </div>
+    </div>
+<!-----voting info box--------------->
+    <div id="_vit"></div>
+    <script type="text/javascript">vit.load({
+        modal: true,
+        theme: 'https://tool.votinginfoproject.org/images/theme3.png',
+        officialOnly: false,
+        title: '',
+    
+        colors: {
+          'header': '#ffa004',
+          'landscapeBackgroundHeader': '#dd8004'
+        },
+        language: 'en',
+        json: {
+          text: {
+            headers: {
+              pollingLocation: 'Find your polling place'
+            },
+            resources: {
+              electionAdministration: {
+                stateElectionsOffice: 'State Elections Office'
+              },
+              moreResources: {
+                electionInformationUrl: 'Election Information',
+                registrationConfirmationUrl: 'Registration Confirmation',
+                absenteeVotingInformationUrl: 'Absentee Voting Information',
+                votingLocationFinderUrl: 'Voting Location Finder',
+                ballotInformationUrl: 'Ballot Information'
+              }
+            }
+          }
+       }
+    });</script>
+
+
+
+<!--script-->
+    <script src=./rep.script.js></script>
+</body>
+</html>
